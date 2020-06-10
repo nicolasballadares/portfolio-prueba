@@ -1,0 +1,254 @@
+// Colores
+$violeta : rgba(5,23,36,1);
+$azul : rgba(127,90,131,1);
+$rosa : rgba(229,56,102,1);
+$chicle : rgba(204,51,117,1);
+$gris : rgba(112,112,112,1);
+$tiza : rgba(255,255,255,.75);
+$blanco : rgba(255,255,255,1);
+
+// Colores de background
+$gradient01 : rgba(5,23,36,1);
+$gradient02 : rgb(88, 39, 52);
+
+// Estilos principales
+body {
+    background-color: $violeta; 
+    background: linear-gradient(to right, $gradient01 0%, $gradient02 100%); 
+   	background-size: 200% 200%;
+    animation: gradient 10s ease infinite; 
+    transform: rotate(360);
+    font-family: "Raleway"; 
+    font-size: 1rem; 
+    font-weight: normal; 
+    color: $blanco; 
+    margin: 0; 
+    h1 {
+        font-size: 3rem; 
+        color: $rosa; 
+        margin-bottom: 2rem;
+    }
+    h2 {font-weight: bolder; 
+        color: $blanco; 
+        margin-bottom: 2rem;
+    }
+    h3 {
+        margin-bottom: .5rem; 
+        padding-bottom: 2rem; 
+        border-bottom: solid;
+        color: $blanco; 
+        border-color: $rosa;
+    }
+    h4 {
+        color: $gris; 
+        margin-bottom: 3rem;
+    }
+    h5 {
+        font-weight: bold; 
+        padding-top: 1rem;
+    }
+    p {
+        color: $tiza; 
+        padding-bottom: 1rem;
+    }
+    a {
+        text-decoration: none;
+        color: $blanco;
+    }
+}
+
+footer {
+    background-color: $rosa; 
+    background: linear-gradient(to bottom, $chicle 0%, $rosa 100%);
+    padding: 1rem; 
+    text-align: center;
+}
+
+#work {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    padding: 2rem;
+    border-bottom: solid .5rem;
+    border-color: $rosa;
+    background-color: $tiza;
+    h2 {
+        margin-bottom: 1rem;
+    }
+    h4 {
+        margin-bottom: 1rem;
+    }
+    img {
+        margin-bottom: 1rem;
+        box-shadow: 0 8px 6px -6px $gris;
+    }
+    p {
+        color: $violeta;
+        padding-bottom: .5rem;
+    }
+    svg {
+        margin-left: .5rem;
+        color: $blanco;
+    }
+    button {
+        margin-bottom: 1rem;
+    }
+    #thumb {
+        padding: 0rem;
+        img {
+            max-height: 9rem;
+            max-width: auto;
+            padding: 0;
+            margin: .5rem;
+        }
+    }
+}
+
+#navbar {
+    font-size: .9rem;
+    color: $blanco;
+    background-color: $rosa;
+    div {
+        color: $blanco;
+    }
+}
+
+#portada {
+    margin-top: 3rem;
+}
+
+#portfolio {
+    background-color: $tiza;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    margin-bottom: 2rem;
+    .carousel {
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+    }
+    .carousel-item img  {
+        border: 4px solid;	
+        border-radius: 24px; 
+        border-color: $blanco;
+    }
+}
+
+.btn.btn-primary {
+    background-color: $blanco;
+    padding: .75rem;
+    margin-bottom: 2rem;
+    font-weight: bold;
+    color: $rosa;
+}
+
+.btn.btn-secondary {
+    background-color: $rosa;
+    text-decoration: none;
+    border: none;
+}
+
+.dropdown-item.active {
+    background-color: $blanco;
+    color: $rosa;
+}
+
+.contacto {
+    font-weight: bold;
+    color: $blanco;
+    padding-bottom: 0;
+}
+
+.modal-body {
+    margin-bottom: 1rem;
+    a {
+        margin-top: 1rem;
+        text-decoration: none;
+        color: $violeta;
+        svg {
+            margin-right: .5rem;
+        }
+    }
+}
+.redes a {
+    padding: .25rem;
+}
+
+#experiencia {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+#adobe-icons {
+    margin-left: 1rem;
+}
+
+.adobe img {
+    margin: .5rem;
+    padding: .1rem;
+    max-width: 4rem;
+}
+
+// Modal
+
+.modal {
+    padding: 1rem;
+    .modal-img {
+        :hover {
+            animation: pop 0.3s linear 1;
+        }
+    }
+    p {
+        color: $violeta;
+    }
+    img {
+        padding-bottom: 1rem;
+    }   
+    .btn-danger {
+        background-color: $rosa;
+    }
+}
+
+// Animaciones
+#pop {
+    :hover {
+        animation: pop 1s ease-in-out infinite;
+    }
+}
+
+.adobe img:hover
+{
+    cursor: default;
+    transform: rotate(360deg);
+    transition: all 1s ease-in-out 0s;
+}
+
+.redes svg:hover
+{
+    cursor: default;
+    transform: rotate(360deg);
+    transition: all 1s ease-in-out 0s;
+}
+
+.modal-body svg:hover
+{
+    cursor: default;
+    transform: rotate(-360deg);
+    transition: all 1s ease-in-out 0s;
+}
+
+
+@keyframes pop {
+    50%  {transform: scale(1.2);}
+    100%  {transform: scale(1.2);}
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
